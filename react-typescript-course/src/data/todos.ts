@@ -18,6 +18,6 @@ export const dummyData: Todo[] = [
     {
         id:4,
         title : "Comment this video",
-        completed:false,
+        completed:true,
     },
 ];
