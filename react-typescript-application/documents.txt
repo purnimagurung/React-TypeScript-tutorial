@@ -1,3 +1,5 @@
 1. create a react app using vite
 2. install framer-motion
     npm i framer-motion react-anchor-link-smooth-scroll@1.0.12 @heroicons/react
+
+    npm i -D prettier prettier-plugin-tailwindcss
