@@ -14,15 +14,17 @@ import ActionButton from "../../shared/ActionButton";
 // const[isMenuToggled, setIsMenuToggled] = useState(false);
 
 type Props = {
+  isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const FlexBetween = "flex item-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-
+  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+
 
   /* Toggled function */
   //   const handleMenuToggle = () => {
@@ -31,7 +33,7 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
 
   return (
     <nav>
-      <div className={`${FlexBetween} fixed top-0 z-30 w-full py-6`}>
+      <div className={`${navbarBackground} ${FlexBetween} fixed top-0 z-30 w-full py-6`}>
         <div className={`${FlexBetween} mx-auto w-5/6`}>
           <div className={`${FlexBetween} w-full gap-16`}>
             {/* left-side */}
@@ -82,8 +84,8 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
           </div>
         </div>
       </div>
-      {/* Mobile menu modal */}
 
+      {/* Mobile menu modal */}
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
           {/* Close Icon */}
