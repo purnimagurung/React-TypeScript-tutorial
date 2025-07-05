@@ -10,6 +10,8 @@ import SignupForm from './components/auth/SignUpForm';
 import FoodMenu from './components/pages/FoodMenu';
 import AboutUs from './components/pages/AboutUs';
 import { Menu } from '@headlessui/react';
+import PopularCategoriesSection from './components/home/popularCategories/PopularCategoriesSection';
+import PopularCategoryPage from './components/home/popularCategories/PopularCategoryPage';
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
           {/* Auth routes wrapped in AuthLayout */}
           <Route path="/login" element={ <AuthLayout> <LoginForm /> </AuthLayout>  }/>
           <Route  path="/signup" element={ <AuthLayout> <SignupForm />  </AuthLayout> }/>
+
+          <Route path="/" element={<PopularCategoriesSection />} />
+          <Route path="/categories/:categoryName" element={<PopularCategoryPage />} />
         </Routes>
       </Router>
     </AuthProvider>

@@ -26,7 +26,6 @@ const OrderSteps = () => {
             ${index % 2 === 0 ? 'translate-x-0' : 'translate-x-8'}
           `}
         >
-          {/* Optional step number (uncomment if needed) */}
           {/* <div className="absolute -left-6 top-1 text-5xl font-bold text-orange-200"> {index + 1} </div> */}
           <span className="text-orange-500 font-bold text-lg"> {step.title} </span>
           <p className="text-sm">

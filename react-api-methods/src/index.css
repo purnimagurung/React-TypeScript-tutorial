@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.swiper-wrapper {
+/* .swiper-wrapper {
           width: 100%;
           height: max-content !important;
           padding-bottom: 64px !important;
@@ -21,4 +21,4 @@
   width: 50%;
   margin: 1rem auto 0 auto;
   position: relative;
-}
+} */
